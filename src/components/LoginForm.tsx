@@ -9,11 +9,11 @@ const LoginForm: React.FC = () => {
   return (
     <form>
       {forms.map((el) => (
-        <>
+        <React.Fragment key={el.id}>
           <label>{el.label}</label>
-          <input key={el.id} type={el.type} onChange={onChange(el.id)} />
+          <input type={el.type} onChange={onChange(el.id)} />
           <br />
-        </>
+        </React.Fragment>
       ))}
     </form>
   );
